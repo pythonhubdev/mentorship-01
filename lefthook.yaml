@@ -1,0 +1,23 @@
+---
+pre-commit:
+    parallel: false
+    jobs:
+        -   run: bun lint "{staged_files}"
+            glob:
+                - "*.ts"
+                - "*.js"
+                - "*.tsx"
+                - "*.jsx"
+            stage_fixed: true
+        -   run: bun format "{staged_files}"
+            glob:
+                - "*.ts"
+                - "*.js"
+                - "*.tsx"
+                - "*.jsx"
+            stage_fixed: true
+commit-msg:
+    parallel: false
+    jobs:
+        -   run: bunx commitlint --edit $1
+            stage_fixed: true

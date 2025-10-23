@@ -1,0 +1,52 @@
+node_modules
+.DS_Store
+dist-ssr
+*.local
+.env
+.nitro
+.tanstack
+.wrangler
+
+# Local
+
+# Dist
+coverage/
+
+# Profile
+.rspack-profile-*/
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+
+# START Ruler Generated Files
+/AGENTS.md
+/AGENTS.md.bak
+/CLAUDE.md
+/CLAUDE.md.bak
+# END Ruler Generated Files
+
+logs.txt
+.output/
+
+.harper-dictionary.txt
+
+.git
+.github
+.scripts
+.yamllint.yaml
+yamlfmt.yaml
+lefthook.yaml
+biome.json
+qodana.yaml
+.editorconfig
+.commitlintrc.json
