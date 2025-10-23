@@ -1,6 +1,5 @@
 node_modules
 .DS_Store
-dist
 dist-ssr
 *.local
 .env
@@ -9,12 +8,9 @@ dist-ssr
 .wrangler
 
 # Local
-*.log*
 
 # Dist
-dist/
 coverage/
-html/
 
 # Profile
 .rspack-profile-*/
@@ -24,8 +20,6 @@ html/
 !.vscode/extensions.json
 .idea
 
-.idea/
-.vscode/
 
 # Playwright
 /test-results/
@@ -35,8 +29,6 @@ html/
 
 
 # START Ruler Generated Files
-/.github/copilot-instructions.md
-/.github/copilot-instructions.md.bak
 /AGENTS.md
 /AGENTS.md.bak
 /CLAUDE.md
@@ -47,4 +39,14 @@ logs.txt
 .output/
 
 .harper-dictionary.txt
-*.tsbuildinfo
+
+.git
+.github
+.scripts
+.yamllint.yaml
+yamlfmt.yaml
+lefthook.yaml
+biome.json
+qodana.yaml
+.editorconfig
+.commitlintrc.json

@@ -1,0 +1,12 @@
+---
+yaml-files:
+    - "*.yaml"
+    - "*.yml"
+rules:
+    comments-indentation:
+        level: "warning"
+    indentation: "enable"
+    line-length:
+        max: 120
+    quoted-strings: "enable"
+    trailing-spaces: "enable"

@@ -92,6 +92,7 @@
 		"experimentalScannerIgnores": ["src/styles.css"],
 		"includes": [
 			"**",
+			"**/*.ts",
 			"!**/node_modules",
 			"!**/dist",
 			"!**/*.min.js",

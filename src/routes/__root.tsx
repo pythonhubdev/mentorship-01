@@ -4,14 +4,18 @@ import {
 	Outlet,
 	Scripts,
 } from "@tanstack/solid-router";
-import { TanStackRouterDevtools } from "@tanstack/solid-router-devtools";
-import TanStackQueryProvider from "../integrations/tanstack-query/provider.tsx";
-
+import M01DevTools from "~/core/integrations/tanstack/devtools.tsx";
+import M01QueryProvider from "~/core/integrations/tanstack/QueryProvider.tsx";
 import styleCss from "../styles.css?url";
 
 export const Route = createRootRouteWithContext()({
 	head: () => ({
 		links: [{ rel: "stylesheet", href: styleCss }],
+		meta: [
+			{
+				name: "Mentorship.01",
+			},
+		],
 	}),
 	shellComponent: RootComponent,
 });
@@ -19,12 +23,11 @@ export const Route = createRootRouteWithContext()({
 function RootComponent() {
 	return (
 		<>
-			<TanStackQueryProvider>
+			<M01QueryProvider>
 				<HeadContent />
-
 				<Outlet />
-				<TanStackRouterDevtools />
-			</TanStackQueryProvider>
+				<M01DevTools />
+			</M01QueryProvider>
 
 			<Scripts />
 		</>
