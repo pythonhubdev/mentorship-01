@@ -2,7 +2,10 @@
 
 html {
 	scroll-behavior: smooth;
-	overflow-y: scroll;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	height: 100%;
 }
 
 body {
@@ -15,6 +18,9 @@ body {
 	background: #000;
 	color: #fff;
 	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
 }
 
 /* Premium Typography */
@@ -57,12 +63,12 @@ h6 {
 	--secondary: 0 0% 12%;
 	--secondary-foreground: 0 0% 98%;
 	--muted: 0 0% 15%;
-	--muted-foreground: 0 0% 63%;
+	--muted-foreground: 0 0% 85%;
 	--accent: 0 0% 18%;
 	--accent-foreground: 0 0% 98%;
 	--border: 0 0% 15%;
 	--input: 0 0% 15%;
-	--ring: 0 0% 83%;
+	--ring: 0 0% 90%;
 }
 
 /* Premium Animations */
@@ -236,6 +242,7 @@ h6 {
 .animate-fade-in-scale {
 	will-change: opacity, transform;
 }
+
 @keyframes scroll {
 	0% {
 		transform: translateX(0);
@@ -410,24 +417,6 @@ html.hydrated .animate-fade-in-scale {
 
 .animate-blob {
 	animation: blob 15s ease-in-out infinite;
-}
-
-/* Premium scrollbar */
-::-webkit-scrollbar {
-	width: 6px;
-}
-
-::-webkit-scrollbar-track {
-	background: #000;
-}
-
-::-webkit-scrollbar-thumb {
-	background: rgba(255, 255, 255, 0.15);
-	border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-	background: rgba(255, 255, 255, 0.25);
 }
 
 /* Smooth scroll behavior */
