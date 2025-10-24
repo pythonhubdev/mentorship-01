@@ -5,7 +5,6 @@ html {
 	overflow-x: hidden;
 	margin: 0;
 	padding: 0;
-	height: 100%;
 }
 
 body {
@@ -33,22 +32,42 @@ h6 {
 	letter-spacing: -0.02em;
 	font-feature-settings:
 		"kern" 1,
-		"liga" 1;
+		"liga" 1,
+		"calt" 1;
 }
 
-/* Selection styling */
+/* Enhanced Selection styling */
 ::selection {
-	background: rgba(255, 255, 255, 0.15);
+	background: rgba(255, 255, 255, 0.2);
 	color: #fff;
 }
 
 ::-moz-selection {
-	background: rgba(255, 255, 255, 0.15);
+	background: rgba(255, 255, 255, 0.2);
 	color: #fff;
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+
 :root {
-	--radius: 0.5rem;
+	--radius: 0.75rem;
 	--duration: 500ms;
 	--delay: 0ms;
 }
@@ -102,6 +121,98 @@ h6 {
 	to {
 		opacity: 1;
 		transform: translateX(0);
+	}
+}
+
+@keyframes shimmer {
+	0% {
+		background-position: -1000px 0;
+	}
+	100% {
+		background-position: 1000px 0;
+	}
+}
+
+@keyframes glow {
+	0%,
+	100% {
+		opacity: 0.5;
+	}
+	50% {
+		opacity: 1;
+	}
+}
+
+/* Utility Classes */
+.animate-fade-in-up {
+	animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-fade-in-scale {
+	animation: fade-in-scale 0.6s ease-out forwards;
+}
+
+.animate-slide-in {
+	animation: slide-in 0.6s ease-out forwards;
+}
+
+/* Glass Morphism */
+.glass {
+	background: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient Text */
+.gradient-text {
+	background: linear-gradient(to right, #ffffff, #a0a0a0);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+/* Focus States */
+*:focus-visible {
+	outline: 2px solid rgba(255, 255, 255, 0.3);
+	outline-offset: 2px;
+	border-radius: 4px;
+}
+
+/* Smooth Transitions */
+* {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card Hover Effects */
+.card-hover {
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Enhancement */
+button {
+	cursor: pointer;
+	user-select: none;
+}
+
+button:active {
+	transform: scale(0.98);
+}
+
+/* Performance Optimization */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms;
+		animation-iteration-count: 1;
+		transition-duration: 0.01ms;
+		scroll-behavior: auto;
 	}
 }
 
