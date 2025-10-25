@@ -1,24 +1,26 @@
 import { createFileRoute } from "@tanstack/solid-router";
 import {
 	ArrowRight,
-	ChevronDown,
-	Code,
-	Database,
-	Palette,
-	Sparkles,
-	TrendingUp,
-	Users,
-	Menu,
-	X,
-	Target,
-	Compass,
-	Star,
 	Award,
 	BookOpen,
-	MessageCircle,
-	Shield,
 	Check,
+	ChevronDown,
+	Code,
+	Compass,
+	Database,
+	Menu,
+	MessageCircle,
+	Palette,
+	Shield,
+	Sparkles,
+	Star,
+	Target,
+	TrendingUp,
+	Users,
+	X,
 } from "lucide-solid";
+import { siGithub } from "simple-icons";
+import { createSignal } from "solid-js";
 import { Motion } from "solid-motionone";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
@@ -29,8 +31,6 @@ import {
 	CardHeader,
 	CardTitle,
 } from "~/components/ui/card";
-import { siGithub } from "simple-icons";
-import { createSignal } from "solid-js";
 
 export const Route = createFileRoute("/")({ component: App });
 
